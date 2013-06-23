@@ -1,0 +1,274 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <link rel="stylesheet" type="text/css" href="index_files/style.css">
+</head>
+<body>
+<div id="header">
+    <h1>Ashu, David, Lili</h1>
+    <span>COMP 7081, Spring 2013</span>
+</div><!-- end header -->
+<div id="navigation">
+    <ol class="level1">
+        <li><h2><a href="#intro">Introduction</a></h2></li>
+        <li><h2><a href="#background">Background</a></h2></li>
+        <li><h2><a href="#req_analysis">Requirements Analysis</a></h2></li>
+            <ol class="level2">
+                <li><h3><a href="#user_stories">User Stories</a></h3></li>
+                <li><h3><a href="#class_diag">Class Diagrams</a></h3></li>
+                <li><h3><a href="#seq_diag">Sequence Diagrams</a></h3></li>
+                <li><h3><a href="#data_flow">Data Flow Diagrams</a></h3></li>
+            </ol>
+        <li><h2><a href="#sys_design">System Design</a></h2></li>
+            <ol class="level2">
+                <li><h3><a href="#arch">Architecture</a></h3></li>
+                <li><h3><a href="#components">Components</a></h3></li>
+                <li><h3><a href="#db">Database</a></h3></li>
+                <li><h3><a href="#detailed_class_diag">Detailed Class Diagrams</a></h3></li>
+                <li><h3><a href="#detailed_seq_diag">Detailed Sequence Diagrams</a></h3></li>
+                <li><h3><a href="#ui">User Interface</a></h3></li>
+            </ol>
+        <li><h2><a href="#proc_model">Process Model</a></h2></li>
+        <li><h2><a href="#gantt">Gantt Chart</a></h2></li>
+    </ol>
+</div><!-- end navigation -->
+<hr>
+<!-- FILL EVERYTHING IN BELOW THIS LINE -->
+<div id="content">
+    <ol class="level1">
+        <a id="intro"></a>
+        <li><h2>Introduction</h2></li>
+			<p>The project proposal is for a system to allow the rental and return of vehicles,
+			exchanging of accrued loyalty points to rent or buy vehicles, and to allow the customer
+			to buy insurance. Our client is the local car rental company, SuperRent.</p>
+			<h4>Developer information:</h4> 
+			<p>David: Network Security, User Interface, Software Developer</p>
+			<p>Ashu: Software Developer, Systems Analyst, Business Analyst</p>
+			<p>Lili: student from CST bachelor program with extended knowledge about database.</p>
+			<h4>Company information:</h4> 
+			<p>The main operation for SuperRent is to rent out cars and trucks to its customers.
+			The company has multiple locations in several cities. In order to meet customers'
+			differing requirements, the company offers rentals on a broad range of cars
+			and trucks. The reward system also involves different discounts for the company's loyal customers.</p>
+			<h4>Project information:</h4>
+			<p>The project includes four components:</p>
+				<ul>
+					<li>Customer membership, points system, reservations</li>
+					<li>Customer vehicle rental, return, point deduction, and insurance purchase</li>
+					<li>Assistance from clerk for customer vehicle rentals, return</li>
+					<li>Manager association for used vehicle sale, sales rates, cost, reports</li>
+				</ul>
+			<p>The component included in this project is the second part: customer vehicle rental, return,
+			point deduction, and insurance purchase.</p>
+        <a id="background"></a>
+        <li><h2>Background</h2></li>
+			<h4>Project description:</h4>
+			<p>This project is one of the components for the whole SuperRent system. The user is the customer.
+			In this component, our software system mainly includes four activities: customer vehicle rental,
+			return, point deduction, and insurance purchase:</p>
+			<ul>
+				<li>Customer vehicle rental: after the customers provide their information, they can make a
+				reservation and have the rental agreement with credit card payment information.</li>
+				<li>For the vehicle return, the customer need to provide their data, time, odometer reading
+				and make sure the gas tank is full. </li>
+				<li>The reward system includes the rules about how to collect points and deduct points.
+				When a customer joins the club, he or she receives 500 points. After the initial points,
+				club members gain 1 point for every $5 they spend. To deduct the points, the club members
+				can exchange 1,000 points for a one day rental of a premium or lower-ranking car. Alternatively,
+				1,500 points for a one day renal for a luxury car, SUV, van or truck. </li>
+				<li>The customer can decide whether they need to have insurance purchase for the whole rental
+				period. The payment need to be made at the point that vehicle is returned. </li>
+			</ul>
+			<p>This component in our project will help the company collect the information about the vehicle
+			rental, payment, point tracking, return and insurance purchase.</p>
+        <a id="req_analysis"></a>
+        <li><h2>Requirements Analysis</h2></li>
+            <ol class="level2">
+                <a id="user_stories"></a>
+                <li><h3>User Stories</h3></li>
+				<div>
+                    <p class="item">Use Case diagram</p>
+                    <img class="noborders" src="index_files/UseCase.png"><br>
+                    <p class="item">User stories</p>
+                    <img class="noborders" src="index_files/UseCaseDeductPoint.png"><br>
+					<img class="noborders" src="index_files/UseCasePurchaseInsurance.png"><br>
+					<img class="noborders" src="index_files/UseCaseMakeRentalAgreement.png"><br>
+					<img class="noborders" src="index_files/UseCaseReturnCars.png"><br>
+					<img class="noborders" src="index_files/UseCaseMakeSalesAgreement.png"><br>
+					<img class="noborders" src="index_files/UseCasePayBill.png"><br>
+                </div>
+                <a id="class_diag"></a>
+                <li><h3>Class Diagrams</h3></li>
+				<div>
+                    <p class="item">Class diagram</p>
+                    <img class="noborders" src="index_files/CarRentalSalesClassDiagram.png"><br>   
+                </div>
+                <a id="seq_diag"></a>
+                <li><h3>Sequence/State Diagrams</h3></li>
+				<div>
+                    <p class="item">Sequence diagram for each use story</p>
+                    <img src="index_files/SequentialDiagramDeductPoint.png">
+                    <br><br>
+					<img src="index_files/SequentialDiagramPurchaseInsurance.png">
+					<br><br>
+					<img src="index_files/SequentialDiagramMakeRentalAgreement.png">
+					<br><br>
+					<img src="index_files/SequentialDiagramReturnVehicle.png">
+					<br><br>
+					<img src="index_files/SequentialDiagramMakeSaleAgreement.png">
+					<br><br>
+					<img src="index_files/SequentialDiagramMakePayment.png"><br>
+                <div>
+                    <p class="item">Rental State diagram</p>
+                    <img src="index_files/rent.png"><br>
+                    <p class="item">Return State diagram</p>
+                    <img src="index_files/return.png"><br>
+                </div>
+                <a id="data_flow"></a>
+                <li><h3>Data Flow Diagrams</h3></li>
+				<div>
+                    <img src="index_files/DFDContext.png">
+                    <br><br>
+                    <img src="index_files/DFDLevel0.png">
+                    <br><br>
+                    <img src="index_files/DFDLevel1.png"><br>
+                </div>
+            </div></ol>
+        <a id="sys_design"></a>
+        <li><h2>System Design</h2></li>
+            <ol class="level2">
+                <a id="arch"></a>
+                <li><h3>Architecture</h3></li>
+				<img src="index_files/architecture_diagram.png"><br>
+                <a id="components"></a>
+                <li><h3>Components</h3></li>
+                <div>
+                    <img src="index_files/components.png">
+                </div>
+                <a id="db"></a>
+                <li><h3>Database</h3></li>
+				<img src="index_files/Database_diagram.png"><br>
+                <a id="detailed_class_diag"></a>
+                <li><h3>Detailed Class Diagrams</h3></li>
+				<div>
+					<img class="noborders" src="index_files/DetailedClassDiagram.png"><br>
+                <div>
+                <a id="detailed_seq_diag"></a>
+                <li><h3>Detailed Sequence Diagrams</h3></li>
+				<div>
+                    <p class="item">Sequence diagram for each use story</p>
+                    <img class="noborders" src="index_files/SequentialDiagramDetailedDeductPoint.png">
+                    <br><br>
+					<img class="noborders" src="index_files/SequentialDiagramDetailedPurchaseInsurance.png">
+					<br><br>
+					<img class="noborders" src="index_files/SequentialDiagramDetailedMakeRentalAgreement.png">
+					<br><br>
+					<img class="noborders" src="index_files/SequentialDiagramDetailedReturnVehicles.png">
+					<br><br>
+					<img class="noborders" src="index_files/SequentialDiagramDetailedMakeSaleAgreement.png">
+					<br><br>
+					<img class="noborders" src="index_files/SequentialDiagramDetailedReturnVehicles.png"><br>
+                <div>
+                <a id="ui"></a>
+                <li><h3>User Interface</h3></li>
+                <div id="ui-mockups">
+                    <h3><em>Please note that all mockups are rough, and that
+                        additional styling can be done before delivery. The
+                        purpose is simply to show the available fields.</em></h3>
+                    <div id="ui-mockups-rent">
+                        <hr>
+                        <h3>Renting</h3>
+                        The entry point for looking up a reservation:<br>
+                        <img src="index_files/UI%2520Mockup%2520Rent%25201.png">
+                        <br><br>
+                        What is displayed when a lookup fails:<br>
+                        <img src="index_files/UI%2520Mockup%2520Rent%25201%2520-%2520Error.png">
+                        <br><br>
+                        Viewing a reservation with no insurance:<br>
+                        <img src="index_files/UI%2520Mockup%2520Rent%25202%2520-%2520No%2520Insurance.png">
+                        <br><br>
+                        Viewing a reservation <em>with</em> insurance:<br>
+                        <img src="index_files/UI%2520Mockup%2520Rent%25202%2520-%2520Insurance.png">
+                        <br><br>
+                        Collecting the customer's Driver's License &amp; Credit Card numbers:<br>
+                        <img src="index_files/UI%2520Mockup%2520Rent%25203.png">
+                        <br><br>
+                        Completed Rental:<br>
+                        <img src="index_files/UI%2520Mockup%2520Rent%25204.png">
+                    </div>
+                    <div id="ui-mockups-return">
+                        <hr>
+                        <h3>Returning</h3>
+                        The vehicle has been returned on time:<br>
+                        <img src="index_files/UI%2520Mockup%2520Return%25201%2520-%2520On%2520Time.png">
+                        <br><br>
+                        The vehicle has <em>not</em> been returned on time:<br>
+                        <img src="index_files/UI%2520Mockup%2520Return%25201%2520-%2520Late.png">
+                        <br><br>
+                        The customer has enough points to pay for the rental in full:<br>
+                        <img src="index_files/UI%252520Mockup%252520Return%2525202%252520-%252520Sufficient%252520Poin.png">
+                        <br><br>
+                        The customer does <em>not</em> have enough points to pay for the rental in full:<br>
+                        <img src="index_files/UI%252520Mockup%252520Return%2525202%252520-%252520Insufficient%252520Po.png">
+                        <br><br>
+                        The customer has used their points towards the rental, but a balance is still owed:<br>
+                        <img src="index_files/UI%252520Mockup%252520Return%2525202%252520-%252520Insufficient%2525_002.png">                        
+                        <br><br>
+                        Completed Return:<br>
+                        <img src="index_files/UI%2520Mockup%2520Return%25203.png">
+                    </div>
+                    <div>
+                        <hr><!-- for visual consistency -->
+                    </div>
+                </div>
+            </div></div></div></div></ol>
+        <a id="proc_model"></a>
+        <li><h2>Process Model</h2></li>
+			<p><b>The requirements that we need to fill for the SuperRent
+			system are:</b></p>
+
+            <ol>
+            <li>Can rent a vehicle</li>
+			<li>Can return a rented vehicle</li>
+			<li>Exchange points to rent a vehicle</li>
+			<li>Exchange points to buy a vehicle</li>
+			<li>Buy insurance for a vehicle</li>
+			</ol>
+
+			<p>There are many different kinds of process models that we can
+			could apply to this project but the one that we as a group feel best fit for
+			this product is to do it in an agile process. We will need to divide up the
+			functionality and arrange it in a manner that would allow us to get feedback
+			quickly and effectively from the client. The whole behind us using the agile
+			process model is to deliver a product to the customer that will be useful and
+			allow them to be able to track the progress of the overall solution. With terms
+			of Agile the client and we will be using the Scrum framework to manage the
+			project.</p>
+
+			<p>Once the requirements are done with the client we will work
+			with them to identify the number of sprints we will need and what requirements will
+			be worked on each sprint. We plan on having sprints at least a week or max two
+			weeks long and at the end of each sprint we will do a deployment to a testing
+			environment so the client can look at it and play around with it if they feel
+			the need to do so. This will also allow us to show the client the progress of
+			the project and in case they are not happy about a certain requirement or they
+			change their mind it will be easy to change the functionality at that point.</p>
+
+			<p>After each sprint there will be a new build that goes out on
+			the testing environment. Depending on the requirements the one week sprints are
+			not finalized as some pieces of functionality will need to take longer to build.
+			After the sprint is done we will spend at least one week testing the build to
+			make sure all the components work are implemented according to the requirements
+			and to the needs of the client.</p>
+
+			<p>This process will give the clients the biggest return on
+			their investment because they are able to track the progress of the project and
+			easier to track changes as well as we can easily adapt any changes.</p>
+        <a id="gantt"></a>
+        <li><h2>Gantt Chart</h2></li>
+			<img src="index_files/Gnatt_part1.png">
+			<br><br>
+			<img src="index_files/Gnatt_part2.png">
+    </ol>
+</div><!-- end content -->
+
+</body></html>

@@ -1,0 +1,25 @@
+Part 1 - formal system requirement review
+Tasks:
+1. Review the system requirement document of the project.
+2. Prepare an agenda for the review.
+3. Prepare an extended checklist (include the items created in the SQA Plan from the lab exercise and make any necessary modifications).
+4. Conduct the review.
+5. Record and submit the results in the D2L Dropbox.
+
+Part 2 - formal system design review
+Tasks:
+1. Review the system design document of the project.
+2. Prepare an agenda for the review.
+3. Prepare an extended checklist (include the items created in the SQA Plan from the lab exercise and make any necessary modifications).
+4. Conduct the review.
+5. Record and post the results in the D2L Dropbox.
+
+Your final report will be a report on the review including the following sections:
+A. Background of the Project
+B. Areas focused in the System Requirement review
+C. Agenda / Checklist / Minutes of meetings used in the formal review of the System Requirement
+D. Results of the formal review of the System Requirement
+E. Areas focused in the System Design review
+F. Agenda / Checklist / Minutes of meetings used in the formal review of the System Design
+G. Results of the formal review of the System Design
+H. Conclusion of the review

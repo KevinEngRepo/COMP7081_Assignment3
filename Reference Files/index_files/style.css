@@ -1,0 +1,40 @@
+* {
+    font-family: Verdana;
+    font-weight: normal;
+}
+
+body { margin-left: 20px; }
+
+a {
+    color: #0077ff;
+    text-decoration: none;
+}
+
+#header {
+    text-align: center;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+ol.level1 {
+    list-style-type: upper-alpha;
+}
+
+ol.level2 {
+    list-style-type: lower-alpha;
+}
+
+p.item {
+    text-decoration: underline;
+}
+
+img {
+    border: 1px #000 solid;
+}
+
+#content { max-width: 700px; text-align: justify; }
+
+.noborders { border: none; }
