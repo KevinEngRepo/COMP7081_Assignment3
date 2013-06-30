@@ -1,9 +1,9 @@
-Is there evidence that the work product was reviewed by all stakeholders? 
+ 
 Have acceptance criteria been established for the work product? 
-Does the work product have a clearly defined purpose and scope? 
+How is  purpose and scope clearly defined for this project? 
 Are references to policies, directives, procedures, standards, and terminology provided? 
-Does the work product identify any and all constraints/limitations? 
-Does the plan contain a purpose and scope? 
+Are there any and all constraints/limitations that can be identified? 
+How well defined does the purpose explain how the scope of the project can handle and adjust for new requirements?
 Does the purpose specify what software items are covered by the plan? 
-Does the purpose specify the intended use of the software? 
-Does the purpose state what portion of the life cycle is covered by the plan? 
+What kind of plans are specified for software components?
+Can the project life cycle allow for newly introduced required components and how can this be accomplished?
