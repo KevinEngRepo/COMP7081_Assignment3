@@ -1,9 +1,8 @@
- 
+How well does the project plan cover the software integrity requirements?
 Have acceptance criteria been established for the work product? 
 How is  purpose and scope clearly defined for this project? 
 Are references to policies, directives, procedures, standards, and terminology provided? 
 Are there any and all constraints/limitations that can be identified? 
 How well defined does the purpose explain how the scope of the project can handle and adjust for new requirements?
-Does the purpose specify what software items are covered by the plan? 
 What kind of plans are specified for software components?
 Can the project life cycle allow for newly introduced required components and how can this be accomplished?
