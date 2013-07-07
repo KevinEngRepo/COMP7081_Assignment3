@@ -67,7 +67,7 @@
 								How well does the project plan cover the software integrity requirements?
 								</td>
 								<td>
-								There is very little mention of covering for software correctness in the requirements
+								There is very little mention of contingency plans for software correctness in the requirements
 								</td>
 							</tr>
 							<tr>
@@ -75,7 +75,7 @@
 								Have acceptance criteria been established for the work product? 
 								</td>
 								<td>
-								The reports’ Use Cases give brief expectations of what the software is capable of and the resulting output
+								The reports’ Use Cases give brief expectations of what the software is capable of and what is the expected resulting output
 								</td>
 							</tr>
 							<tr>
@@ -83,7 +83,7 @@
 								How is purpose and scope clearly defined for this project? 
 								</td>
 								<td>
-								The overall project purpose and scope was covered in the Use Case diagram. Though there could have been more elaboration.
+								The overall project purpose and scope was covered in the Use Case diagram. Though there could have been more elaboration on how these functionalities affect the system as a whole.
 								</td>
 							</tr>
 							<tr>
@@ -91,7 +91,7 @@
 								Are references to policies, directives, procedures, standards, and terminology provided? 
 								</td>
 								<td>
-								Procedures were explained in the sequence and data flow diagrams. Directives and standards are established in the Use cases. In terms of policies and terminology, there weren’t any examples of a data dictionary to explain terms to non-experts stakeholders.
+								Procedures were explained in the sequence and data flow diagrams. Directives and standards are established in the Use cases. In terms of policies and terminology, there weren’t any examples of a data dictionary to explain terms to non-experts and uninformed stakeholders.
 								</td>
 							</tr>
 							<tr>
@@ -99,7 +99,7 @@
 								Are there any and all constraints/limitations that can be identified? 
 								</td>
 								<td>
-								No constraints or limitations were defined for this project. Instead, there are only mentions of functional requirements.
+								No constraints or limitations were defined for this project. Instead, there are only brief mentions of functional requirements.
 								</td>
 							</tr>
 							<tr>
@@ -107,7 +107,7 @@
 								How well defined does the purpose explain how the scope of the project can handle and adjust for new requirements?
 								</td>
 								<td>
-								The project doesn’t appear to have room for any possible additional requirements. The project scope only explains what components the developers wanted to cover.
+								The project doesn’t appear to have room for any possible additional requirements. The project scope only explains what components the developers wanted to discuss during their project timeline.
 								</td>
 							</tr>
 							<tr>
@@ -131,7 +131,7 @@
 								Analysis and Recommendations
 								</th>
 								<td>
-								The project doesn’t well define software correctness to implement the requirements; however, the class diagram and CRC are consistent. The project plan doesn’t well consider accuracy for requirement.
+								The project doesn’t clearly define software correctness to implement the requirements; however, the class diagrams and CRC cards are consistent with one another. There should be more room made to allow for any new requirements
 								</td>
 							</tr>
 						</table>
@@ -575,12 +575,12 @@
 				<br/>
 			<li id="subtitle">Results of the formal review of the System Design</li>
 				<ul>
-					<li>Database why are we tracking gas level in the vehicle table not in the rental records table as all cars should be full on leaving so there is no need to track a starting amount only a return amount at it will be fluctuating based on who used it last also should be tied not just to the car but to the renter.</li>
+					<li>In the Database why are we tracking gas level in the vehicle table not in the rental records table as all cars should be full on leaving so there is no need to track a starting amount only a return amount at it will be fluctuating based on who used it last also should be tied not just to the car but to the renter.</li>
 					<li>A customer can only have one rental agreement</li> 
-					<li>each vehicle type can only be attached to one vehicle.</li>
-					<li>no data types are mentioned</li>
-					<li>CarRentalReservation references a vehicle type vehicle type is not referenced as an attribute anywhere else in the class diagram.</li>
-					<li>Vehicle appears to store a large number of functions with a small number of attributes also no id number referenced.</li>
+					<li>Each vehicle type can only be attached to one vehicle. Which means there can be only one type of each vehicle in the database.</li>
+					<li>No specific data types are mentioned which makes it diffcult for the reviewers to understand the intended usage of data.</li>
+					<li>CarRentalReservation references a vehicle type. Vehicle type is not referenced as an attribute anywhere else in the class diagram.</li>
+					<li>Vehicle appears to store a large number of functions with a small number of attributes also there are no id number referenced.</li>
 				</ul>
 				<br/>
 			<li id="subtitle">Conclusion of the Overall Review</li>
