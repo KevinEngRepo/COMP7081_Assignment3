@@ -295,11 +295,11 @@
 				<br/>
 			<li id="subtitle">Results of the formal review of the System Requirement</li>
 				<ul>
-					<li>Vehicle Class no specification’s placed only references other tables. No requirement made to track vehicle beyond type. No date of purchase, no color, no requirements beyond a referencing another table.</li>
-					<li>The class structure seems strange to have a one-to-one between carRentalReservation and vehicle though this will allow to lock of the vehicle for other CarRentalReservation this will mean deleting the CarRetanlReservation entries to free up vehicles in the database as a requirement this also removes a requirement to track everything but StartDate and confirmation number that is in CarRentalReservation.</li> 
-					<li>DFD diagrams are up to level 2 data flow is consistent and concise describing correct states and with well-defined transitions.</li>
-					<li>Nowhere in the original user stories is it mentioned that a customer can use points to purchase days of rent the only requirement placed on the system in the user stories is to allow the customer to pay for their insurance with points. Even though this is referenced in the Introduction</li>
-					<li> For the CareSalesAgreement class, the requirement to track the start and end time of a sales agreement is not shown anywhere in the customer requirements and having separate fields for it seems odd also tracking the odometer reading in that class where is it coming from?</li>
+					<li>Vehicle Class no specification’s placed only references other classes. No requirement made to track vehicle beyond type. No date of purchase, no color, no requirements beyond a referencing other classes.</li>
+					<li>The class structure seems strange to have a one-to-one between carRentalReservation and vehicle though this will allow to lock off the vehicle from other CarRentalReservations this will mean deleting the CarRetanlReservation entries to free up vehicles in the database as a requirement this also removes a requirement to track everything but StartDate and confirmation number that is in CarRentalReservation.</li> 
+					<li>DFD diagrams are up to level 2 data flow is consistent and concise describing correct states and with well-defined transitions. Though missing a description is should be alright to follow without would have been nice to see some kind of description accompany the diagram.</li>
+					<li>Nowhere in the user stories is it mentioned that a customer can use points to purchase rental days. Even though it is stated in the background this is a requirement. The only requirement placed on the points system in the user stories is to allow the customer to pay for their insurance with points.</li>
+					<li> For the CareSalesAgreement class, the requirement to track the start and end time of a sales agreement is not shown anywhere in the customer requirements this need is not stated anywhere in the user stories. Then tracking the odometer reading in that class shows off the lack of information stored in the vehicle class. Where is it coming from if it isn't coming from the vehicle it self but the vehicle has to required attribute connected with the Odometer?</li>
 				</ul>
 				<br/>
 			<li id="subtitle">Areas focused in the System Design review</li>
@@ -575,12 +575,12 @@
 				<br/>
 			<li id="subtitle">Results of the formal review of the System Design</li>
 				<ul>
-					<li>In the Database why are we tracking gas level in the vehicle table not in the rental records table as all cars should be full on leaving so there is no need to track a starting amount only a return amount at it will be fluctuating based on who used it last also should be tied not just to the car but to the renter.</li>
-					<li>A customer can only have one rental agreement</li> 
-					<li>Each vehicle type can only be attached to one vehicle. Which means there can be only one type of each vehicle in the database.</li>
-					<li>No specific data types are mentioned which makes it diffcult for the reviewers to understand the intended usage of data.</li>
-					<li>CarRentalReservation references a vehicle type. Vehicle type is not referenced as an attribute anywhere else in the class diagram.</li>
-					<li>Vehicle appears to store a large number of functions with a small number of attributes also there are no id number referenced.</li>
+					<li> The tracking gas level in the vehicle table not in the rental records table seems redundant as all cars should be full on leaving. The return fluctuation is based on who used it last not on the specific car and has more to do with how to charge the customer then on the current status of the vehicle so is should be tied not to the car but to the renter.</li>
+					<li>With the one to one cardinality between the Customer table and RentalSaleAgreement table a customer can only have one rental agreement ever. This means that the RentalSalesAgreement table must be deleted to allow for a customer to rent another car. Since a number of other tables reference the RentalSalesAgreement table this would leave them orphans with no connection to the costumer table. This is a major design flaw which would create major issues in implementation. </li> 
+					<li>Another one to one cardinality issues between VehicleType and the Vehicle table.Each vehicle type can only be attached to one vehicle. Which means there can be only one type of each vehicle in the database. This just makes having a separate table for type redundant as for every vehicle you would have to create a new type entry.</li>
+					<li>No specific data types are mentioned which makes it difficult for the reviewers to understand the intended usage of data. Adding data types in the design document would show the user estimated memory usage and also how the information could be sorted and accessed.</li>
+					<li>CarRentalReservation references a vehicle type. Vehicle type is not referenced as an attribute anywhere else in the class diagram. The attribute would seem to make sense  to exist also in the vehicle class or at least one it is connected too other wise we have no idea where the type is coming from.</li>
+					<li>Vehicle appears to store a large number of functions with a small number of attributes with no id number referenced. This means that in the class there is no way to differentiate vehicles from each other based on an attribute it contains. A number of the functions placed inside the Vehicle class seem out of place attached directly to the vehicle. addInsurance is also used in CarInsurance the question of why are there two addInsurane functions seem obvious as the tables are not connected directly to each other to show one may draw from the other. The deductPoint() function seems like it should be kept in the classes that handle payment not directly on the Vehicle. Other suspect functions include makeCashPayment(), and makeCreditCardPayment() these functions though needed should be placed in a different class. </li>
 				</ul>
 				<br/>
 			<li id="subtitle">Conclusion of the Overall Review</li>
