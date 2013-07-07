@@ -11,6 +11,9 @@ ol#TableOfContents{
 list-style:upper-alpha;
 }
 
+ol#sublists{
+list-style:lower-alpha;
+}
 
 li{
 font-size:14pt;
