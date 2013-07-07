@@ -9,6 +9,11 @@ margin-right:auto;
 
 ol#TableOfContents{
 list-style:upper-alpha;
+
+}
+
+li#subtitle{
+font-weight:bold;
 }
 
 ol#sublists{
@@ -36,9 +41,20 @@ margin-left:auto;
 margin-right:auto;
 }
 
-table#dfd td{
+table th{
 border:1px solid black;
-text-align:center;
+text-align:left;
+font-weight:strong;
+}
+
+table td{
+border:1px solid black;
+text-align:left;
+}
+
+#subhead{
+font-weight:bold;
+font-size: 18px;
 }
 
 #archImg{

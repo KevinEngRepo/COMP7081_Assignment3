@@ -9,9 +9,9 @@
 			<h3>Group 4: Kevin Eng, Alex Lochhead, and James Kwon</h3>
 			<br/>
 		<ol id="TableOfContents">
-			<li>Project Background</li>
+			<li id="subtitle">Project Background</li>
 				<ul>
-					<li>This project is one of the components for the SuperRent system. The user in this component is the customer. The system mainly includes four activities: customer vehicle rental, return, point deduction, and insurance purchase:</li>
+					<li>The reviewed system design is a portion of an overall SuperRent system. The user this section of the product is focused upon is the customer. No functionality for managers or employees will be discussed in this design document or this review.  The document concentrates of four major areas of functionality: customer vehicle rental, return, point deduction, and insurance purchase.</li>
 						<ul>
 							<li>Customer Vehicle Rental: after the customers provide their information, they can make a reservation and have the rental agreement with credit card payment information.</li>
 							<li>Vehicle Return: Customers need to provide the following information, time, odometer reading and whether the gas tank has been refilled.</li>
@@ -21,46 +21,293 @@
 					<li>The component in this project will help the company collect information about vehicle rental, return, payment, customer point tracking, and insurance purchase.</li>
 				</ul>
 				<br/>
-			<li>Areas focused in the System Requirement review</li>
+			<li id="subtitle">Areas focused in the System Requirement review</li>
 				<ul>
 					<li>Correctness</li>
 					<li>Usability</li>
 					<li>Integrity</li>
 				</ul>
 				<br/>
-			<li>Agenda / Checklist / Minutes of meetings used in the formal review of the System Requirement</li>
-				<ol>
-					<li>Review Group 2’s System Requirements document</li>
-					<li>Discuss thoughts on document</li>
-						<ol id="sublists">
-							<li>Establish and review SQA plan</li>
-						</ol>
-					<li>Make modifications if necessary</li>
-					<li>Conduct Formal Requirements Review</li>
-						<ol id="sublists">
-							<li>Correctness</li>
-							<li>Usability</li>
-							<li>Integrity</li>
-						</ol>
-					<li>Record results of review</li>
-					<li>Analyze results of review</li>
-					<li>Produce and compile recommendations based on analysis</li>
-					<li>Draft Final Review Report</li>
-						<ol id="sublists">
-							<li>Delegate sections to members of the review team</li>
-						</ol>
-				</ol>
+			<li id="subtitle">Agenda / Checklist / Minutes of meetings used in the formal review of the System Requirement</li>
+				<ul>
+					<li>Agenda</li>
+					<ol>
+						<li>Review Group 2’s System Requirements document</li>
+						<li>Discuss thoughts on document</li>
+							<ol id="sublists">
+								<li>Establish and review SQA plan</li>
+							</ol>
+						<li>Make modifications if necessary</li>
+						<li>Conduct Formal Requirements Review</li>
+							<ol id="sublists">
+								<li>Correctness</li>
+								<li>Usability</li>
+								<li>Integrity</li>
+							</ol>
+						<li>Record results of review</li>
+						<li>Analyze results of review</li>
+						<li>Produce and compile recommendations based on analysis</li>
+						<li>Draft Final Review Report</li>
+							<ol id="sublists">
+								<li>Delegate sections to members of the review team</li>
+							</ol>
+					</ol>
+					<br/>
+					<li>Checklist</li>
+						<table>
+							<tr>
+								<th colspan="2" id="subhead">Correctness</th>
+							</tr>
+							<tr>
+								<td>
+								How well does the project plan cover the software integrity requirements?
+								</td>
+								<td>
+								There is very little mention of covering for software correctness in the requirements
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Have acceptance criteria been established for the work product? 
+								</td>
+								<td>
+								The reports’ Use Cases give brief expectations of what the software is capable of and the resulting output
+								</td>
+							</tr>
+							<tr>
+								<td>
+								How is purpose and scope clearly defined for this project? 
+								</td>
+								<td>
+								The overall project purpose and scope was covered in the Use Case diagram. Though there could have been more elaboration.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Are references to policies, directives, procedures, standards, and terminology provided? 
+								</td>
+								<td>
+								Procedures were explained in the sequence and data flow diagrams. Directives and standards are established in the Use cases. In terms of policies and terminology, there weren’t any examples of a data dictionary to explain terms to non-experts stakeholders.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Are there any and all constraints/limitations that can be identified? 
+								</td>
+								<td>
+								No constraints or limitations were defined for this project. Instead, there are only mentions of functional requirements.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								How well defined does the purpose explain how the scope of the project can handle and adjust for new requirements?
+								</td>
+								<td>
+								The project doesn’t appear to have room for any possible additional requirements. The project scope only explains what components the developers wanted to cover.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								What kinds of plans are specified for software components?
+								</td>
+								<td>
+								The plans only specify the components for customer vehicle rental, return, point deduction, and insurance purchase.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Can the project life cycle allow for newly introduced required components and how can this be accomplished?
+								</td>
+								<td>
+								There doesn’t appear to be any room for any new requirements or components in the project timeline due to the strict Scrum development cycle.
+								</td>
+							</tr>
+							<tr>
+								<th>
+								Analysis and Recommendations
+								</th>
+								<td>
+								The project doesn’t well define software correctness to implement the requirements; however, the class diagram and CRC are consistent. The project plan doesn’t well consider accuracy for requirement.
+								</td>
+							</tr>
+						</table>
+						<br/>
+						<table>
+							<tr>
+								<th colspan="2" id="subhead">Usability</th>
+							</tr>
+							<tr>
+								<td>
+								Based on existing documentation/information, do you understand the system in the context of each of the views in the system engineering hierarchy?
+								</td>
+								<td>
+								Yes; Upon further review, this documentation seems specifically designed for expert users and does not allow for much room for novice end-users
+								</td>
+							</tr>
+							<tr>
+								<td>
+								 Is system output and input adequately defined? 
+								</td>
+								<td>
+								Yes, the Use Cases and sequence  diagrams cover the expected resulting output 
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Have expert and novice modes of interaction been defined?
+								</td>
+								<td>
+								No; There is no specified novice or expert interactions. Only base user requirements defined
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Have important interfaces to all system elements been described?
+								</td>
+								<td>
+								Yes, the class diagrams clearly describe the important interfaces of which the user can interact with.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Is the behaviour of the software consistent with the information it must process and the functions it must perform? 
+								</td>
+								<td>
+								Yes; use cases, sequence diagrams, and data flow diagrams map out the software process by explaining from the point where the user inputs their data, how the system utilises the information, and what is the resulting output
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Has the UI been designed effectively with the use cases in mind?
+								</td>
+								<td>
+								There are many prime examples of UI usage, but some functionalities aren't completely covered in terms of user stories. For instance, the points deduction system is hardly discussed and we aren't given a clear idea of how the the points are used.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Have business requirements been met in the use cases?
+								</td>
+								<td>
+								Not entirely, the document only specifies the component functionalities for customer vehicle rental, return, point deduction, and insurance purchase.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Have all users been identified?
+								</td>
+								<td>
+								Yes, the component this project covers is primarily meant for the customer end-user
+								</td>
+							</tr>
+							<tr>
+								<th>
+								Analysis and Recommendations
+								</th>
+								<td>
+								Software is capable of carrying out its’ defined functionalities. Should contain novice and expert interaction definitions
+								</td>
+							</tr>
+						</table>
+						<br/>
+						<table>
+							<tr>
+								<th colspan="2" id="subhead">Integrity</th>
+							</tr>
+							<tr>
+								<td>
+								Have all data objects been described?
+								</td>
+								<td>
+								Yes, the class diagrams cover most of the 
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Have all attributes been identified?
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Do major functions remain within scope and has each been adequately described? 
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Does the system have a consistently designed user interface? 
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Will end users be able to find the functions they are familiar with?
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Are proper naming conventions being followed?
+								</td>
+								<td>
+								No; there are inconsistencies within the variable naming of the elements and classes
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Do the developers’ goals match with the customers goals?
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Can the system prevent corruption?
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+							<tr>
+								<th>
+								Analysis and Recommendations
+								</th>
+								<td>
+								The project doesn’t well define software correctness to implement the requirements; however, the class diagram and CRC are consistent. The project plan doesn’t well consider accuracy for requirement.
+								</td>
+							</tr>
+						</table>
+				</ul>
 				<br/>
-			<li>Results of the formal review of the System Requirement</li>
+			<li id="subtitle">Results of the formal review of the System Requirement</li>
+				<ul>
+					<li>Vehicle Class no specification’s placed only references other tables. No requirement made to track vehicle beyond type. No date of purchase, no color, no requirements beyond a referencing another table.</li>
+					<li>The class structure seems strange to have a one-to-one between carRentalReservation and vehicle though this will allow to lock of the vehicle for other CarRentalReservation this will mean deleting the CarRetanlReservation entries to free up vehicles in the database as a requirement this also removes a requirement to track everything but StartDate and confirmation number that is in CarRentalReservation.</li> 
+					<li>DFD diagrams are up to level 2 data flow is consistent and concise describing correct states and with well-defined transitions.</li>
+					<li>Nowhere in the original user stories is it mentioned that a customer can use points to purchase days of rent the only requirement placed on the system in the user stories is to allow the customer to pay for their insurance with points. Even though this is referenced in the Introduction</li>
+					<li> For the CareSalesAgreement class, the requirement to track the start and end time of a sales agreement is not shown anywhere in the customer requirements and having separate fields for it seems odd also tracking the odometer reading in that class where is it coming from?</li>
+				</ul>
 				<br/>
-			<li>Areas focused in the System Design review</li>
+			<li id="subtitle">Areas focused in the System Design review</li>
 				<ul>
 					<li>Reusuability</li>
 					<li>Efficiency</li>
 					<li>Flexibility</li>
 				</ul>
 				<br/>
-			<li>Agenda / Checklist / Minutes of meetings used in the formal review of the System Design</li>
+			<li id="subtitle">Agenda / Checklist / Minutes of meetings used in the formal review of the System Design</li>
+				<ul>
+					<li>Agenda</li>
 				<ol>
 					<li>Review Group 2’s System Design document</li>
 					<li>Discuss thoughts on document</li>
@@ -80,14 +327,264 @@
 					<li>Draft Final Review Report</li>
 						<ol id="sublists">
 							<li>Delegate sections to members of the review team</li>
+							<li>Conduct peer reviews of report drafts</li>
 						</ol>
+					<li>Compile final draft of Final Review report</li>
 				</ol>
 				<br/>
-			<li>Results of the formal review of the System Design</li>
+					<li>Checklist</li>
+						<table>
+							<tr>
+								<th colspan="2" id="subhead">Reusability</th>
+							</tr>
+							<tr>
+								<td>
+								What are the interfaces between the reused software and the operator? 
+								</td>
+								<td>
+								The target system doesn’t interface between the plant system/environment and the reused software.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								What are the interfaces between the reused software and the plant system/environment? 
+								</td>
+								<td>
+								The target system doesn’t interface between the plant system/environment and the reused software.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								How does the architecture define reusable software for the target and legacy systems? 
+								</td>
+								<td>
+								The architecture well defines external legacy systems but doesn’t define reusable component of the legacy systems.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								What method does the design define to reuse the software?  
+								</td>
+								<td>
+								The design doesn’t define reuse method but each class can be reused for the system extension.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								What environment must be initialized prior to executing the reused software?  
+								</td>
+								<td>
+								The target system uses Web-based environment but it doesn’t initialize Web-browser UI.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								What schema does the project adopt to reuse software components in the design phase? 
+								</td>
+								<td>
+								The project document doesn’t define a reusable software schema.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Does the each component in the design have specific, clear and well defined operations in the each interface?
+								</td>
+								<td>
+								The component diagram doesn’t clearly define an interface for access. Each component designed very roughly and the interconnectivity is not very well-defined.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Is each component capable of handling repeated usage?
+								</td>
+								<td>
+								The components are not well designed for reuse but the class designs compensate for repeated usage.
+								</td>
+							</tr>
+							<tr>
+								<th>
+								Analysis and Recommendations
+								</th>
+								<td>
+								The design document doesn’t consider software reusability for the legacy and the target system. To improve the system quality and to reduce project cost, it is recommended that the project adopts software reuse strategy and technology.
+								An especially good example we would recommend is RAS(Reusable Asset Specification) by the OMG(Object Management Group). These are a set of guidelines and recommendations about the structure, content, and descriptions of reusable software assets.
+								</td>
+							</tr>
+						</table>
+						<br/>
+						<table>
+							<tr>
+								<th colspan="2" id="subhead">Efficiency</th>
+							</tr>
+							<tr>
+								<td>
+								Does the potential component have run-time characteristics that are acceptable within the context of the existing design?
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Does the potential component have data management capabilities that are consistent with the existing design?
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Have algorithmic design alternatives been considered? If yes, why was this design chosen?
+								</td>
+								<td>
+							
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Has an object-relationship model been defined?
+								</td>
+								<td>
+								Yes; class diagram explains this
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Is each subsystem appropriately allocated to processors and tasks?
+								</td>
+								<td>
+								The system uniformly runs its processes to carry out it’s tasks
+								</td>
+							</tr>
+							<tr>
+								<td>
+								How much memory is allocated to each component?
+								</td>
+								<td>
+								The amount of memory allocated isn’t explained in the plan
+								</td>
+							</tr>
+							<tr>
+								<td>
+								How is data communicated between software components?
+								</td>
+								<td>
+								The data flow diagram explains the process from which the user inputs information & commands, to the point where the system outputs its responses accordingly
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Can simpler data structures be used?
+								</td>
+								<td>
+								Yes, there is always room to simplify any form of data structures
+								</td>
+							</tr>
+							<tr>
+								<th>
+								Analysis and Recommendations
+								</th>
+								<td>
+								
+								</td>
+							</tr>
+						</table>
+						<br/>
+						<table>
+							<tr>
+								<th colspan="2" id="subhead">Flexibility</th>
+							</tr>
+							<tr>
+								<td>
+								Is the system capable of adapting to all types of problems or defects?
+								</td>
+								<td>
+								 
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Is the system capable of allocating resources when under high stress? 
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Can the system retrieve information based on generalized queries/requests?
+								</td>
+								<td>
+								With each query there is a subclass, subtype to classify for 
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Can this system evolve? 
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Can we adjust for any changes in requirements, internal or external, made by the customer? 
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Can the system handle being introduced to new components?
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Can the minimum and maximum information output be adjusted?
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+								What types of risks is the system capable of handling?
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+							<tr>
+								<th>
+								Analysis and Recommendations
+								</th>
+								<td>
+								
+								</td>
+							</tr>
+						</table>
+				</ul>
 				<br/>
-			<li>Conclusion of the Overall Review</li>
+			<li id="subtitle">Results of the formal review of the System Design</li>
+				<ul>
+					<li>Database why are we tracking gas level in the vehicle table not in the rental records table as all cars should be full on leaving so there is no need to track a starting amount only a return amount at it will be fluctuating based on who used it last also should be tied not just to the car but to the renter.</li>
+					<li>A customer can only have one rental agreement</li> 
+					<li>each vehicle type can only be attached to one vehicle.</li>
+					<li>no data types are mentioned</li>
+					<li>CarRentalReservation references a vehicle type vehicle type is not referenced as an attribute anywhere else in the class diagram.</li>
+					<li>Vehicle appears to store a large number of functions with a small number of attributes also no id number referenced.</li>
+				</ul>
 				<br/>
-			<li>Feedback on your experience of having your project reviewed</li>
+			<li id="subtitle">Conclusion of the Overall Review</li>
+				<ul>
+					<li></li>
+				</ul>
+				<br/>
+			<li id="subtitle">Feedback on your experience of having your project reviewed</li>
 				<br/>
 		</ol>
 	</body>
