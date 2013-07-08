@@ -247,7 +247,7 @@
 								Does the system have a consistently designed user interface? 
 								</td>
 								<td>
-								The menu content format is consistent across the different transistion states, but there the navigation only seems to flow in one direction assuming that the user will not cancel their session or make any mistakes whatsoever.
+								The menu content format is consistent across the different transition states, but there the navigation only seems to flow in one direction assuming that the user will not cancel their session or make any mistakes whatsoever.
 								</td>
 							</tr>
 							<tr>
@@ -279,7 +279,7 @@
 								Can the system prevent corruption?
 								</td>
 								<td>
-								There weren't any contingency plans made for the possiblity of system corruption.
+								There weren't any contingency plans made for the possibility of system corruption.
 								</td>
 							</tr>
 							<tr>
@@ -295,19 +295,11 @@
 				<br/>
 			<li id="subtitle">Results of the formal review of the System Requirement</li>
 				<ul>
-<<<<<<< HEAD
-					<li>In the Vehicle Class, no specifications are placed and only references other tables are made. No requirement set to track vehicle beyond type. No date of purchase, no color, no requirements beyond referencing another table.</li>
-					<li>The class structure seems strange to have a one-to-one between carRentalReservation and vehicle, this will prevent a vehicle to be available in the system for other CarRentalReservation. This will require deleting the CarRentalReservation entries to free up vehicles in the database as a requirement. As a result, the requirement to track everything but CarRentalReservation StartDate and confirmation number is removed.</li> 
-					<li>DFD diagrams up to level 2 data flow are consistent and concise describing correct states and with well-defined transitions.</li>
-					<li>Even though there is reference in the original requirement and design document introduction, in the original user stories there is no mention that a customer can use points to purchase days of rent the only requirement placed on the system in the user stories is to allow the customer to pay for their insurance with points. </li>
-					<li> For the CarSalesAgreement class, the requirement to track the start and end time of a sales agreement is not shown anywhere in the customer requirements and having separate fields for it seems odd also tracking the odometer reading in that class where is it coming from?</li>
-=======
-					<li>Vehicle Class no specification’s placed only references other classes. No requirement made to track vehicle beyond type. No date of purchase, no color, no requirements beyond a referencing other classes.</li>
-					<li>The class structure seems strange to have a one-to-one between carRentalReservation and Vehicle though this will allow to lock off the vehicle from other CarRentalReservations this will mean deleting the CarRetanlReservation entries to free up vehicles in the database as a requirement this also removes a requirement to track everything but StartDate and confirmation number that is in CarRentalReservation.</li> 
+					<li>In the Vehicle Class, no specifications are placed and only references other tables are made. No requirement made to track vehicle beyond type. No date of purchase, no color, no requirements beyond a referencing other classes.</li>
+					<li>The class structure seems strange to have a one-to-one between carRentalReservation and Vehicle though this will allow to lock off the vehicle from other CarRentalReservations this will mean deleting the CarRentalReservation entries to free up vehicles in the database as a requirement this also removes a requirement to track everything but StartDate and confirmation number that is in CarRentalReservation.</li> 
 					<li>DFD diagrams are up to level 2 data flow is consistent and concise describing correct states and with well-defined transitions. Though missing a description is should be all right to follow without it though would have been nice to see some kind of description accompanying the diagram.</li>
 					<li>Nowhere in the user stories is it mentioned that a customer can use points to purchase rental days. Even though it is stated in the background that this is a requirement. The only requirement placed on the points system in the user stories is to allow the customer to pay for their insurance with points. There should be user story for renting using points and then the requirement should be placed through out the rest of the document so the implementation will not miss this crucial functionality. </li>
-					<li> For the CareSalesAgreement class, the requirement to track the start and end time of a sales agreement is not shown anywhere in the customer requirements neither is it stated anywhere in the user stories. Then tracking the odometer reading in that class shows off the lack of information stored in the vehicle class which has not attributes. Where is it coming from if it isn't coming from the vehicle it self?</li>
->>>>>>> origin/Alex_Mod_FinalReport
+					<li> For the CarSalesAgreement class, the requirement to track the start and end time of a sales agreement is not shown anywhere in the customer requirements neither is it stated anywhere in the user stories. Then tracking the odometer reading in that class shows off the lack of information stored in the vehicle class which has not attributes. Where is it coming from if it isn't coming from the vehicle it self?</li>
 				</ul>
 				<br/>
 			<li id="subtitle">Areas focused in the System Design review</li>
@@ -430,26 +422,26 @@
 							</tr>
 							<tr>
 								<td>
-								Does the potential component have run-time characteristics that are acceptable within the context of the existing design?
+								Does the document contain data type information?
 								</td>
 								<td>
-								
-								</td>
-							</tr>
-							<tr>
-								<td>
-								Does the potential component have data management capabilities that are consistent with the existing design?
-								</td>
-								<td>
-								
+								No, this leaves the inability to understand what each field will be used for and their capabilities.
 								</td>
 							</tr>
 							<tr>
 								<td>
-								Have algorithmic design alternatives been considered? If yes, why was this design chosen?
+								Does the database cardinality function correctly with the user and efficiency requirements?
 								</td>
 								<td>
-							
+								Database design does contain cardinality issues cause major redundancies and general data structure flaws.
+								</td>
+							</tr>
+							<tr>
+								<td>
+								Are classes designed to reduce redundancies and minimize resource usage?
+								</td>
+								<td>
+								There are redundancies found within classes, functions, and attributes. Which cause increased resource usage and potential design errors.
 								</td>
 							</tr>
 							<tr>
@@ -457,15 +449,15 @@
 								Has an object-relationship model been defined?
 								</td>
 								<td>
-								Yes; class diagram explains this
+								Yes, the class diagram explains this quite briefly.
 								</td>
 							</tr>
 							<tr>
 								<td>
-								Is each subsystem appropriately allocated to processors and tasks?
+								Is each subsystem appropriately allocated to processor and tasks?
 								</td>
 								<td>
-								The system uniformly runs its processes to carry out it’s tasks
+								Redundancies may cause overlap in tasks and processor usage.
 								</td>
 							</tr>
 							<tr>
@@ -473,7 +465,7 @@
 								How much memory is allocated to each component?
 								</td>
 								<td>
-								The amount of memory allocated isn’t explained in the plan
+								The amount of memory allocated isn’t explained in the plan as no data types are mentioned.
 								</td>
 							</tr>
 							<tr>
@@ -489,7 +481,7 @@
 								Can simpler data structures be used?
 								</td>
 								<td>
-								Yes, there is always room to simplify any form of data structures
+								No data types mentioned, redundancies, and improper naming conventions may cause overlapping and increased complexity to system implementation.
 								</td>
 							</tr>
 							<tr>
@@ -497,7 +489,7 @@
 								Analysis and Recommendations
 								</th>
 								<td>
-								
+								Conflicting naming conventions cause various errors and overall general confusion. For instance, car type and vehicle type in separate classes cannot be properly linked to one another.
 								</td>
 							</tr>
 						</table>
@@ -511,7 +503,7 @@
 								Is the system capable of adapting to all types of problems or defects?
 								</td>
 								<td>
-								 
+								There are no contingency plans for handling any problems or defects. The project is assumed to be functioning perfectly throughout the development phase.
 								</td>
 							</tr>
 							<tr>
@@ -519,7 +511,7 @@
 								Is the system capable of allocating resources when under high stress? 
 								</td>
 								<td>
-								
+								The document only states normal circumstances of system usage.
 								</td>
 							</tr>
 							<tr>
@@ -527,7 +519,7 @@
 								Can the system retrieve information based on generalized queries/requests?
 								</td>
 								<td>
-								With each query there is a subclass, subtype to classify for 
+								With each query there is a subclass and subtype to classify for the request of specific information.
 								</td>
 							</tr>
 							<tr>
@@ -535,7 +527,7 @@
 								Can this system evolve? 
 								</td>
 								<td>
-								
+								Apart from the main functions described in the project background, this system plans to incorporate other components for other types of users.
 								</td>
 							</tr>
 							<tr>
@@ -543,7 +535,7 @@
 								Can we adjust for any changes in requirements, internal or external, made by the customer? 
 								</td>
 								<td>
-								
+								The established plans are static and don't allow for any room to include new or changed requirements.
 								</td>
 							</tr>
 							<tr>
@@ -551,7 +543,7 @@
 								Can the system handle being introduced to new components?
 								</td>
 								<td>
-								
+								The restrictive classes and lack of mentioned data types make it very difficult to introduce any new components.
 								</td>
 							</tr>
 							<tr>
@@ -559,7 +551,7 @@
 								Can the minimum and maximum information output be adjusted?
 								</td>
 								<td>
-								
+								Without knowing what types of data the system uses, we cannot determine if the input or output can be adjusted at all.
 								</td>
 							</tr>
 							<tr>
@@ -567,7 +559,7 @@
 								What types of risks is the system capable of handling?
 								</td>
 								<td>
-								
+								No contingency plans for faults or major system changes are made.
 								</td>
 							</tr>
 							<tr>
@@ -575,7 +567,7 @@
 								Analysis and Recommendations
 								</th>
 								<td>
-								
+								The project doesn not seem very flexible when a major error or fault can occur. These documents were written on the basis that the system will run perfectly throughout the entire development and implementation phases.
 								</td>
 							</tr>
 						</table>
@@ -583,26 +575,19 @@
 				<br/>
 			<li id="subtitle">Results of the formal review of the System Design</li>
 				<ul>
-<<<<<<< HEAD
-					<li>In the Database why are we tracking gas level in the vehicle table not in the rental records table as all cars should be full on leaving so there is no need to track a starting amount only a return amount at it will be fluctuating based on who used it last also should be tied not just to the car but to the renter.</li>
-					<li>A customer can only have one rental agreement</li> 
-					<li>Each vehicle type can only be attached to one vehicle. Which means there can be only one type of each vehicle in the database.</li>
-					<li>No specific data types are mentioned which makes it difficult for the reviewers to understand the intended usage of data.</li>
-					<li>CarRentalReservation references a vehicle type. Vehicle type is not referenced as an attribute anywhere else in the class diagram.</li>
-					<li>Vehicle appears to store a large number of functions with a small number of attributes also there are no id number referenced.</li>
-=======
-					<li> The tracking gas level in the vehicle table not in the rental records table seems redundant as all cars should be full on leaving. The return fluctuation is based on who used it last not on the specific car and has more to do with how to charge the customer then on the current status of the vehicle so is should be tied not to the car but to the renter.</li>
-					<li>With the one to one cardinality between the Customer table and RentalSaleAgreement table a customer can only have one rental agreement ever. This means that the RentalSalesAgreement table must be deleted to allow for a customer to rent another car. Since a number of other tables reference the RentalSalesAgreement table this would leave them orphans with no connection to the costumer table. This is a major design flaw which would create major issues in implementation. </li> 
+					<li>Tracking the gas level in the vehicle table not in the rental records table seem redundant as all cars should be full upon leaving. The return fluctuation is based upon who rented it last; not on the specific car and specifically how to charge the customer on the current status of the vehicle. Therefore, it should be tied not to the car but to the renter.</li>
+					<li>With the one to one cardinality between the Customer table and RentalSaleAgreement table a customer can only have one rental agreement ever. This means that the RentalSaleAgreement table must be deleted to allow for a customer to rent another car. Since a number of other tables reference the RentalSaleAgreement table this would leave them orphans with no connection to the costumer table. This is a major design flaw which would create major issues in implementation. </li> 
 					<li>Another one to one cardinality issues between VehicleType and the Vehicle table.Each vehicle type can only be attached to one vehicle. Which means there can be only one type of each vehicle in the database. This just makes having a separate table for type redundant as for every vehicle you would have to create a new type entry.</li>
 					<li>No specific data types are mentioned which makes it difficult for the reviewers to understand the intended usage of data. Adding data types in the design document would show the user estimated memory usage and also how the information could be sorted and accessed.</li>
 					<li>CarRentalReservation references a vehicle type. Vehicle type is not referenced as an attribute anywhere else in the class diagram. The attribute would seem to make sense  to exist also in the vehicle class or at least one it is connected too other wise we have no idea where the type is coming from.</li>
-					<li>Vehicle appears to store a large number of functions with a small number of attributes with no id number referenced. This means that in the class there is no way to differentiate vehicles from each other based on an attribute it contains. A number of the functions placed inside the Vehicle class seem out of place attached directly to the vehicle. addInsurance is also used in CarInsurance the question of why are there two addInsurane functions seem obvious as the tables are not connected directly to each other to show one may draw from the other. The deductPoint() function seems like it should be kept in the classes that handle payment not directly on the Vehicle. Other suspect functions include makeCashPayment(), and makeCreditCardPayment() these functions though needed should be placed in a different class. </li>
->>>>>>> origin/Alex_Mod_FinalReport
+					<li>Vehicle appears to store a large number of functions with a small number of attributes with no id number referenced. This means that in the class there is no way to differentiate vehicles from each other based on an attribute it contains. A number of the functions placed inside the Vehicle class seem out of place attached directly to the vehicle. addInsurance is also used in CarInsurance the question of why are there two addInsurance functions seem obvious as the tables are not connected directly to each other to show one may draw from the other. The deductPoint() function seems like it should be kept in the classes that handle payment not directly on the Vehicle. Other suspect functions include makeCashPayment(), and makeCreditCardPayment() these functions though needed should be placed in a different class. </li>
 				</ul>
 				<br/>
 			<li id="subtitle">Conclusion of the Overall Review</li>
 				<ul>
-					<li></li>
+					<li>
+					The system requirements is does not thoroughly describe design specifications. The system design cannot adapt to the flexibility for future expanisions. Further lack of consistency between requirements and design models must have more room for software reusabilty for the legacy and targeted system.
+					</li>
 				</ul>
 				<br/>
 			<li id="subtitle">Feedback on your experience of having your project reviewed</li>
